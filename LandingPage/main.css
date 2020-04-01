@@ -1,0 +1,283 @@
+:root {
+    --primary-color: #212121;
+    --secondary-color: #424242;
+    --transition-effect: all 200ms ease-in;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    padding-top: 66px;
+}
+
+
+/* Center text in mobile viewports */
+@media screen and (max-width: 680px) {
+    main {
+        text-align: center;
+    }
+}
+
+h1, h3 {
+    font-family: 'Heebo', sans-serif;
+}
+
+.h1, .h3 , .h5 {
+    font-weight: 800;
+}
+
+.btn {
+    background-color: transparent;
+    border-radius: 28px;
+    border: 0.125em solid var(--secondary-color);
+    color: #fff;
+    transition: var(--transition-effect)
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+
+/******************/
+/* navbar section */
+/******************/
+
+nav {
+    --primary-color: transparent;
+
+    background-color: var(--primary-color);
+    transition: var(--transition-effect);
+}
+
+.navbar-toggler:hover {
+    background-color: var(--secondary-color);
+}
+
+.nav-scrolled {
+    --primary-color: #212121;
+}
+
+#brand {
+    width: 40px;
+    height: 40px;
+}
+
+/* puts margin between icons in collapsed navbar */
+@media screen and (max-width: 991px) {
+    ul.ml-auto li {
+        margin-right: 1rem;
+    }
+}
+
+
+/********/
+/* hero */
+/********/
+
+
+.hero-content {
+    background-image: url('./img/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* hack: parallax effect */
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -10;
+}
+
+.hero-overlay {
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.6);
+   top: 0;
+   bottom: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -5;
+}
+
+
+/*****************/
+/* about section */
+/*****************/
+
+
+.logo {
+    /* centers logo in small resolutions */
+    margin: auto;
+    display: block;
+}
+
+
+/****************/
+/* team section */
+/****************/
+
+
+.team-section {
+    text-align: center;
+}
+
+.team-section .card {
+    background-color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    transition: var(--transition-effect);
+}
+
+.team-section i {
+    font-size: 2em;
+    color: #fff;
+}
+
+.team-section h5, .team-section p {
+    color: #bdbdbd;
+}
+
+.team-section .card:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    border: none;
+}
+
+.team-section .card:hover h5,  .team-section .card:hover p {
+    color: #616161;
+}
+
+.team-section .card:hover i {
+    color: #000;
+}
+
+/*******************/
+/* contact section */
+/*******************/
+
+.contact-section {
+    text-align: center;
+    padding-bottom: 66px;
+}
+
+.form-label {
+    font-size: 12px;
+    color: var(--secondary-color);
+    margin: 0;
+    display: block;
+    text-align: start;
+}
+
+.form-control {
+    background-color: var(--primary-color);
+    border-radius: 0;
+    border-color: var(--secondary-color);
+    border-width: 0 0 2px 0;
+    border-style: none none solid none;
+    box-shadow: none;
+    margin-top: 1em;
+}
+
+.form-control:focus {
+    background-color: var(--primary-color);
+    border-color: #fff;
+    box-shadow: none;
+    color: #fff;
+}
+
+.form-control:focus::placeholder {
+    opacity: 0;
+}
+
+.hide-label {
+    opacity: 0;
+}
+
+/***********/
+/* footer  */
+/***********/
+
+footer {
+    background-color: #2e2e2e;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 40px 50px 20px 50px;
+}
+
+.footer-left p {
+    color: #616161;
+    margin: 0;
+}
+
+.footer-left p.footer-links {
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+p.footer-links a:hover {
+    color: #9e9e9e;
+}
+
+p.footer-links a:before {
+    content: "·";
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+#first-link:before {
+    content: none;
+}
+
+.footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+
+.footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+}
+
+.footer-right a:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+@media (max-width: 680px) {
+    .footer-left, .footer-right {
+      text-align: center;
+    }
+    .footer-right {
+      float: none;
+      margin: 0 auto 20px;
+    }
+    .footer-left p.footer-links {
+      line-height: 1.8;
+    }
+}
